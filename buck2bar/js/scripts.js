@@ -66,4 +66,38 @@ document.addEventListener("DOMContentLoaded", function () {
       myChart.update();
     });
   });
+  document.getElementById("download").addEventListener("click", function () {
+    const link = document.createElement("a");
+    link.href = myChart.toBase64Image();
+    link.download = "chart.png";
+    link.click();
+  });
+  // on change of the input "user_name"
+  document.getElementById("user_name1").addEventListener("input", function () {
+    // get the value of the input
+    const user_name = this.value;
+    // regex validation for the user_name with capital letter and minimum 5 characters 1 special character and 1 number
+    const regex = /^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{5,})/;
+    // test the value of the input with the regex
+    const valid = regex.test(user_name);
+    // if the value is valid
+    if (valid) {
+      // set the user_name border to green
+      this.style.borderColor = "green";
+    } else {
+      // set the user_name border to red
+      this.style.borderColor = "red";
+    }
+  });
+
+  document.getElementById("user_name").addEventListener("blur", function () {
+    const user_name = this.value;
+    const regex = /^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{5,})/;
+    const valid = regex.test(user_name);
+    if (valid) {
+      alert("Username is valid");
+    } else {
+      alert("Username is invalid");
+    }
+  });
 });

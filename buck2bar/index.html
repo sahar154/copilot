@@ -21,6 +21,14 @@
         font-size: 2.5rem; /* Increase the font size of the title */
       }
     </style>
+    <input
+      style="width: fit-content"
+      id="user_name"
+      type="text"
+      placeholder="Insert text"
+      class="form-control form-control-sm"
+    />
+
     <header>
       <h1>Welcome to Buck2Bar</h1>
     </header>
@@ -142,6 +150,8 @@
           aria-labelledby="chart-tab"
         >
           <canvas id="myChart" width="400" height="200"></canvas>
+          <!-- bootstrap button with the label "download"-->
+          <button id="download" class="btn btn-primary">Download</button>
         </div>
       </div>
     </div>
