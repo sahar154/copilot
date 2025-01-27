@@ -100,4 +100,16 @@ document.addEventListener("DOMContentLoaded", function () {
       alert("Username is invalid");
     }
   });
+
+  document.getElementById("helloThere").addEventListener("click", function () {
+    alert("hello");
+  });
 });
+
+for (let index = 0; index < array.length; index++) {
+  const element = array[index];
+  
+}
+
+// an array of 10 cars with the following  properties: brand, model, year, price
+
